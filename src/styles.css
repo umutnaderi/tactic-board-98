@@ -1,0 +1,94 @@
+/* styles.css */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.left-column img {
+    margin-bottom: 10px;
+    /* Adds some spacing between the images */
+}
+
+.right-column {
+    flex: 1;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.shadow {
+
+    width: 600px;
+}
+
+.header {
+    width: 600px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    /* To space the button images evenly */
+    margin-top: 10px;
+    /* Adjust the margin to create spacing between the images */
+}
+
+.button {
+    width: 200px;
+    /* Set the desired width for the button images */
+    height: 60px;
+    /* Maintain aspect ratio */
+}
+
+.player-tag-container {
+    position: absolute;
+    top: 245px;
+    left: 60px;
+    width: 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerTag {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    margin: -9px;
+    padding: 0;
+    /* Adjust the opacity as needed */
+}
+
+.player-sub-tag-container {
+    position: absolute;
+    top: 608px;
+    left: 60px;
+    width: 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerTag {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    margin: -9px;
+    padding: 0;
+    /* Adjust the opacity as needed */
+}
+
+.player-input {
+    width: 100px;
+    /* Adjust the width of the input element */
+    height: 20px;
+    /* Adjust the height of the input element */
+    margin-left: 10px;
+    /* Adjust the margin between player tag and input */
+}
