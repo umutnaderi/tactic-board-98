@@ -1,4 +1,14 @@
 /* styles.css */
+@font-face {
+    font-family: 'font1';
+    src: url('./font/font1.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'titleFont';
+    src: url('./font/font7.ttf') format('truetype');
+}
+
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -26,9 +36,29 @@
 
     width: 600px;
 }
+.header-wrapper {
+    position: relative;
+}
 
 .header {
     width: 600px;
+}
+
+.header-input {
+    position: absolute;
+    top: 45px;
+    /* Adjust these values to position the textbox */
+    left: 300px;
+    transform: translate(-50%, -50%);
+    /* Centers the textbox */
+    text-align: center;
+    width: 500px;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'titleFont';
+    font-size: 55px;
+    text-shadow: 7px 7px 1px rgba(0, 0, 0, 0.5);
 }
 
 .button-container {
@@ -56,6 +86,18 @@
     flex-direction: column;
 }
 
+.player-tag {
+    display: flex;
+    align-items: center;
+    /* Adjust as needed for spacing between each player tag */
+}
+
+.player-sub-tag {
+    display: flex;
+    align-items: center;
+    /* Adjust as needed for spacing between each player tag */
+}
+
 .playerTag {
     width: 100%;
     height: auto;
@@ -75,7 +117,46 @@
     flex-direction: column;
 }
 
-.playerTag {
+.player-input-container {
+    position: absolute;
+    top: 245px;
+    left: 70px;
+    width: 80px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.player-number-container {
+    position: absolute;
+    top: 242px;
+    left: 28px;
+    width: 80px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.player-number {
+    width: 25px;
+    margin-top: 0px;
+    margin-bottom: 11px;
+    height: auto;
+    margin-left: 25px;
+    border: none;
+        outline: none;
+        background: none;
+   text-align: center;
+    font-family: 'font1', sans-serif;
+    font-size: large;
+    color: #68c5ff;
+    text-shadow: 3px 3px 1px rgba(0, 15, 95, 1);
+    /* Adjust this to align with the playerTag */
+}
+
+.playerSubTag {
     width: 100%;
     height: auto;
     opacity: 1;
@@ -85,10 +166,16 @@
 }
 
 .player-input {
-    width: 100px;
-    /* Adjust the width of the input element */
-    height: 20px;
-    /* Adjust the height of the input element */
-    margin-left: 10px;
-    /* Adjust the margin between player tag and input */
+    width: 250px;
+    margin-top: 0px;
+    margin-bottom: 11px;
+    height: auto;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'font1', sans-serif;
+    font-size: large;
+    text-shadow: 7px 7px 1px rgba(0, 0, 0, 0.5);
+    /* Adjust this to align with the playerTag */
 }
