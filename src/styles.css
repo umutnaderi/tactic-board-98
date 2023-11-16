@@ -3,9 +3,29 @@
     font-family: 'font1';
     src: url('./font/font1.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'titleFont';
     src: url('./font/font7.ttf') format('truetype');
+}
+
+@media (max-width: 768px) {
+
+    .player-input-container,
+    .player-number-container,
+    player-tag-container {
+        flex-direction: column;
+        /* Stack elements vertically on small screens */
+    }
+
+    .player-input,
+    .player-number,
+    .player-tag,
+    player-tag-container {
+        width: 100%;
+        /* Adjust width for smaller screens */
+        /* Other adjustments */
+    }
 }
 
 
@@ -36,6 +56,7 @@
 
     width: 600px;
 }
+
 .header-wrapper {
     position: relative;
 }
@@ -58,7 +79,7 @@
     outline: none;
     font-family: 'titleFont';
     font-size: 55px;
-    text-shadow: 7px 7px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 .button-container {
@@ -74,6 +95,10 @@
     /* Set the desired width for the button images */
     height: 60px;
     /* Maintain aspect ratio */
+}
+
+.lineupContainer {
+    overflow: visible !important;
 }
 
 .player-tag-container {
@@ -99,6 +124,7 @@
 }
 
 .playerTag {
+    position: relative;
     width: 100%;
     height: auto;
     opacity: 1;
@@ -119,13 +145,16 @@
 
 .player-input-container {
     position: absolute;
-    top: 245px;
+    top: 242px;
     left: 70px;
     width: 80px;
-    height: 32px;
+    height: 23px;
+    background: none;
     display: flex;
     flex-direction: column;
     align-items: left;
+    overflow: visible !important;
+
 }
 
 .player-number-container {
@@ -133,30 +162,34 @@
     top: 242px;
     left: 28px;
     width: 80px;
-    height: 32px;
+    background: none;
+    height: 23px;
     display: flex;
     flex-direction: column;
     align-items: left;
 }
 
 .player-number {
-    width: 25px;
+    position: relative;
+    width: 30px;
     margin-top: 0px;
+    top: 0px;
     margin-bottom: 11px;
-    height: auto;
-    margin-left: 25px;
+    height: 20px;
+    margin-left: 23px;
     border: none;
-        outline: none;
-        background: none;
-   text-align: center;
+    outline: none;
+    background: none;
+    text-align: center;
     font-family: 'font1', sans-serif;
-    font-size: large;
+    font-size: 19px;
     color: #68c5ff;
-    text-shadow: 3px 3px 1px rgba(0, 15, 95, 1);
+    text-shadow: 3px 3px 0px rgba(0, 15, 95, 1);
     /* Adjust this to align with the playerTag */
 }
 
 .playerSubTag {
+    position: relative;
     width: 100%;
     height: auto;
     opacity: 1;
@@ -166,16 +199,23 @@
 }
 
 .player-input {
+    position: relative;
+
     width: 250px;
     margin-top: 0px;
     margin-bottom: 11px;
-    height: auto;
+    height: 20px;
     margin-left: 30px;
     border: none;
     outline: none;
     background: none;
     font-family: 'font1', sans-serif;
-    font-size: large;
-    text-shadow: 7px 7px 1px rgba(0, 0, 0, 0.5);
+    font-size: 19px;
+    color: #e0e0e0;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+    line-height: 22px;
+    overflow: visible !important;
+    
+
     /* Adjust this to align with the playerTag */
 }

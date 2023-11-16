@@ -24,7 +24,7 @@ const LeftColumn = () => {
   const [button2Src, setButton2Src] = useState(button2); // Initial Src
   const button2AltSrc = button2Pressed; // Alternative Src
 
-  const [button3Src, setButton3Src] = useState(button2); // Initial Src
+  const [button3Src, setButton3Src] = useState(button3); // Initial Src
   const button3AltSrc = button3Pressed; // Alternative Src
 
   const [players, setPlayers] = useState([]);
@@ -209,6 +209,9 @@ const LeftColumn = () => {
                 newPlayers[index].number = e.target.value;
                 setPlayers(newPlayers);
               }}
+              onDragStart={handleDragStart(index)}
+              onDrop={handleDrop(index)}
+              onDragOver={allowDrop}
             />
           ))}
         </div>
