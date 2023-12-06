@@ -30,31 +30,68 @@
 
 
 .container {
+   
+    padding: 20px;
+    background-color: #252626;
+}
+
+.lineup-and-field-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+        /* Center horizontally */
+    align-items: center;
+        /* Center vertically */
+    
 }
 
-.left-column {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.left-column img {
+.lineup-and-field-container img {
     margin-bottom: 10px;
     /* Adds some spacing between the images */
 }
 
-.right-column {
-    flex: 1;
-    background-color: #e0e0e0;
-    padding: 20px;
+
+.pitchContainer{
+    display: block;
+    color: #999;
 }
 
-.shadow {
+#field.field-image {
+    background-image: url('/src/img/Field_B.png');
+    background-color: initial;
+    background-size: 600px 834px;
+}
 
+#field {
+    height: 834px;
     width: 600px;
+    position: relative;
+}
+
+.field-image {
+   
+    left: 10px;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Add CSS classes for individual cells or lines if necessary */
+.cell-1 {
+    grid-column: 1 / 2;
+    /* Adjust column placement */
+    grid-row: 1 / 2;
+    /* Adjust row placement */
+    /* You can add border, background, or other styling here */
+}
+
+#shadow {
+    height: 650px;
+    width: 600px;
+    position: relative;
+}
+
+#shadow.shadow-image {
+    background-image: url('/src/img/Shadow_B.png');
+    background-size: 600px 650px;
 }
 
 .header-wrapper {
@@ -102,9 +139,9 @@
 }
 
 .player-tag-container {
-    position: absolute;
-    top: 245px;
-    left: 60px;
+    position: relative;
+    left: 30px;
+    top: 30px;
     width: 40px;
     height: auto;
     display: flex;
@@ -134,9 +171,9 @@
 }
 
 .player-sub-tag-container {
-    position: absolute;
-    top: 608px;
-    left: 60px;
+    position: relative;
+    top: 30px;
+    left: 30px;
     width: 40px;
     height: auto;
     display: flex;
@@ -145,8 +182,8 @@
 
 .player-input-container {
     position: absolute;
-    top: 242px;
-    left: 70px;
+    top: 28px;
+    left: 45px;
     width: 80px;
     height: 23px;
     background: none;
@@ -159,8 +196,7 @@
 
 .player-number-container {
     position: absolute;
-    top: 242px;
-    left: 28px;
+    top: 28px;
     width: 80px;
     background: none;
     height: 23px;

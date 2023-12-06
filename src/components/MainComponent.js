@@ -1,13 +1,11 @@
 // MainComponent.js
 import React from "react";
-import LeftColumn from "./LeftColumn";
-import RightColumn from "./RightColumn";
+import LineupAndField from "./LineupAndField";
 
 const MainComponent = () => {
   return (
     <div className="container">
-      <LeftColumn />
-      <RightColumn />
+      <LineupAndField />
     </div>
   );
 };
