@@ -1,0 +1,32 @@
+/* Grid.css */
+
+@font-face {
+    font-family: 'font3';
+    src: url('./font/font1.ttf') format('truetype');
+}
+
+.grid-container {
+    width: 600px;
+    height: 800px;
+
+}
+
+.draggable-element {
+    position: absolute;
+    
+    font-size: 17px;
+    text-shadow: 4px 4px 1px rgba(5, 5, 5, 5);
+    line-height: 22px;
+    background: none;
+    color: #e0e0e0;
+    cursor: grab;
+    user-select: none;
+}
+
+/* Styles for the draggable handles */
+.draggable-handle {
+  cursor: grab;
+  color: #fff;
+font-family: 'font3';
+  text-align: center;
+}

@@ -1,5 +1,7 @@
 // LeftColumn.js
 import React, { useState, useEffect } from "react";
+import Grid from "./Grid";
+import FieldComponent from "./FieldComponent";
 import header from "../img/Header_B.png";
 import shadow from "../img/Shadow_B.png";
 import button1 from "../img/ButtonArrow_B.png";
@@ -71,18 +73,20 @@ const LineupAndField = () => {
     return files[randomIndex];
   };
 
-  const [placeholders, setPlaceholders] = useState([]);
+  /*const [placeholders, setPlaceholders] = useState([]);*/
+  const [playernames, setPlayerNames] = useState([]);
 
   useEffect(() => {
     const filePath = randomFile();
     fetch(filePath)
       .then((response) => response.text())
       .then((text) => {
-        setPlaceholders(text.split("\n")); // Assuming each placeholder is on a new line
+        /*setPlaceholders(text.split("\n")); // Assuming each placeholder is on a new line*/
+        setPlayerNames(text.split("\n"));
       });
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Initialize players with placeholders
     if (placeholders.length > 0) {
       setPlayers(
@@ -93,7 +97,20 @@ const LineupAndField = () => {
         }))
       );
     }
-  }, [placeholders]);
+  }, [placeholders]);*/
+
+  useEffect(() => {
+    // Initialize players with placeholders
+    if (playernames.length > 0) {
+      setPlayers(
+        playernames.map((playername, index) => ({
+          name: playername,
+          number: index + 1,
+          placeholder: "",
+        }))
+      );
+    }
+  }, [playernames]);
 
   const handleDragStart = (index) => (event) => {
     event.dataTransfer.setData("text/plain", index);
@@ -221,7 +238,10 @@ const LineupAndField = () => {
         </div>
       </div>
       <div className="pitchContainer">
-        <div className="field-image" id="field"></div>
+        <div className="field-image" id="field">
+          {/* Pass the players state and setPlayers function to Grid component */}
+          <Grid players={players} setPlayers={setPlayers} />
+        </div>
       </div>
     </div>
   );

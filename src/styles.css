@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: 'font2';
+    src: url('./font/font2.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'titleFont';
     src: url('./font/font7.ttf') format('truetype');
 }
@@ -27,12 +32,74 @@
         /* Other adjustments */
     }
 }
+body {
+    overflow: hidden;
+    /* Disable scrolling */
+}
 
+.main-container {
+    position: relative;
+    opacity: 100%;
+    color: #333;
+    background-image: url("../src/img/bgs/bg5.jpg");
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-image {
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    background-color: rgba(45, 45, 45, 0.2);
+    backdrop-filter: blur(10px);
+    color: #5b5b5b;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-list li {
+    margin: 0 20px;
+    /* Add spacing between list items */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #505050;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Add rounded corners */
+    transition: background-color 0.3s ease;
+    /* Add smooth hover transition */
+}
+
+.nav-list li a:hover {
+    background-color: #ffd700;
+    /* Change to your desired hover color */
+    color: #333;
+    /* Change text color on hover */
+}
 
 .container {
-   
     padding: 20px;
-    background-color: #252626;
 }
 
 .lineup-and-field-container {
@@ -68,7 +135,7 @@
 }
 
 .field-image {
-   
+    
     left: 10px;
     max-width: 600px;
     height: auto;
@@ -245,7 +312,7 @@
     border: none;
     outline: none;
     background: none;
-    font-family: 'font1', sans-serif;
+    font-family: 'font2', sans-serif;
     font-size: 19px;
     color: #e0e0e0;
     text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
