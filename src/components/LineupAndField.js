@@ -237,10 +237,14 @@ const LineupAndField = () => {
           </div>
         </div>
       </div>
-      <div className="pitchContainer">
+      <div className="pitchContainer" id="pitch-container">
         <div className="field-image" id="field">
           {/* Pass the players state and setPlayers function to Grid component */}
-          <Grid players={players} setPlayers={setPlayers} />
+          <Grid
+            players={players}
+            setPlayers={setPlayers}
+            playerNumbers={players.map((player) => player.number)}
+          />
         </div>
       </div>
     </div>
