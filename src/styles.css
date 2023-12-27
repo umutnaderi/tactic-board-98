@@ -38,16 +38,17 @@ body {
 }
 
 .main-container {
-    position: relative;
+    position: fixed;
     opacity: 100%;
     color: #333;
     background-image: url("../src/img/bgs/bg5.jpg");
-    width: 100%;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+
+    
     backdrop-filter: blur(100px);
     background-color: rgba(0, 0, 0, 0.2);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
 }
 

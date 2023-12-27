@@ -41,17 +41,17 @@ const Grid = ({ players, setPlayers, playerNumbers }) => {
   };
 
   const initialPositions442 = [
-    { x: 260, y: 790 }, //GK
-    { x: 515, y: 660 }, //RB
-    { x: 350, y: 660 }, //RCB
-    { x: 180, y: 660 }, //LCB
-    { x: 15, y: 660 }, //LB
-    { x: 515, y: 410 }, //RM
-    { x: 345, y: 410 }, //RCM
-    { x: 175, y: 410 }, //LCM
+    { x: 240, y: 785 }, //GK
+    { x: 465, y: 635 }, //RB
+    { x: 315, y: 635 }, //RCB
+    { x: 165, y: 635 }, //LCB
+    { x: 15, y: 635 }, //LB
+    { x: 465, y: 410 }, //RM
+    { x: 315, y: 410 }, //RCM
+    { x: 165, y: 410 }, //LCM
     { x: 15, y: 410 }, //LM
-    { x: 335, y: 110 }, //RS
-    { x: 185, y: 110 }, //LS
+    { x: 315, y: 110 }, //RS
+    { x: 165, y: 110 }, //LS
 
     // ... add more positions as needed
   ];
@@ -81,40 +81,27 @@ const Grid = ({ players, setPlayers, playerNumbers }) => {
         <Draggable
           key={index}
           axis="both"
-          grid={[85, 50]}
+          grid={[75, 75]}
           handle=".draggable-handle"
           defaultPosition={initialPositions442[index]}
-          bounds={{ left: 15, top: 0, right: 515, bottom: 800 }}
+          bounds={{ left: 15, top: 0, right: 465, bottom: 785 }}
           onDrag={handleDrag}
         >
           <div
             className={`draggable-element player-${index}`}
             onMouseDown={(e) => handleMouseDown(e, index)}
           >
-            <div className="draggable-handle" id={`player-${index}`}>
-              <span style={{ color: "yellow" }}>{playerNumbers[index]}</span>
-              <br />
-              {extractSurname(players[index].name)}
+            <div className="playerContainer" id="player-container">
+              <div className="draggable-handle" id={`player-${index}`}>
+                <span style={{ color: "yellow" }}>{playerNumbers[index]}</span>
+                <br />
+                {extractSurname(players[index].name)}
+              </div>
+              {/* Your content goes here */}
             </div>
-            {/* Your content goes here */}
           </div>
         </Draggable>
       ))}
-      {isDrawing &&
-        drawnLines.map((line, index) => (
-          <svg key={index} style={{ position: "absolute", zIndex: 1000 }}>
-            {line.map((point, i) => (
-              <circle key={i} cx={point.x} cy={point.y} r="3" fill="red" />
-            ))}
-            <path
-              d={`M${line.map((point) => `${point.x} ${point.y}`).join("L")}`}
-              stroke="red"
-              strokeWidth="2"
-              fill="none"
-              strokeDasharray="5,5"
-            />
-          </svg>
-        ))}
     </div>
   );
 };

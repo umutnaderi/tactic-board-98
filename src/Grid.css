@@ -11,9 +11,15 @@
 
 }
 
+#player-container{
+  border: solid 0px #ccc;
+    height: 50px;
+    width: 120px;
+    background: none;
+}
+
 .draggable-element {
     position: absolute;
-    
     font-size: 18px;
     text-shadow: 4px 4px 1px rgba(5, 5, 5, 5);
     line-height: 22px;
