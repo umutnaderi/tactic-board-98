@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tactic-board-98/static/css/main.57005c2c.css",
-    "main.js": "/tactic-board-98/static/js/main.a1d7c2fe.js",
+    "main.css": "/tactic-board-98/static/css/main.f795e265.css",
+    "main.js": "/tactic-board-98/static/js/main.772c5732.js",
     "static/js/787.fe2974f3.chunk.js": "/tactic-board-98/static/js/787.fe2974f3.chunk.js",
     "static/media/bg5.jpg": "/tactic-board-98/static/media/bg5.d14c18652234dc5e445c.jpg",
     "static/media/Field_B.png": "/tactic-board-98/static/media/Field_B.0fb554109885bd9e2a85.png",
@@ -13,12 +13,12 @@
     "static/media/Italy.txt": "/tactic-board-98/static/media/Italy.59ea5713945ffdad35d0.txt",
     "static/media/Spain.txt": "/tactic-board-98/static/media/Spain.8d34f8c72e1cbd48ff78.txt",
     "static/media/Brazil.txt": "/tactic-board-98/static/media/Brazil.e09a4e8b281ee3263f1b.txt",
-    "main.57005c2c.css.map": "/tactic-board-98/static/css/main.57005c2c.css.map",
-    "main.a1d7c2fe.js.map": "/tactic-board-98/static/js/main.a1d7c2fe.js.map",
+    "main.f795e265.css.map": "/tactic-board-98/static/css/main.f795e265.css.map",
+    "main.772c5732.js.map": "/tactic-board-98/static/js/main.772c5732.js.map",
     "787.fe2974f3.chunk.js.map": "/tactic-board-98/static/js/787.fe2974f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57005c2c.css",
-    "static/js/main.a1d7c2fe.js"
+    "static/css/main.f795e265.css",
+    "static/js/main.772c5732.js"
   ]
 }
